@@ -27,7 +27,7 @@ The vanilla Generative model inputs a latent code and outputs a sample from a pr
 
 #### The Main Idea.
 
-I replaced the Generator model with a simple volume. The volume has 2 major attributes. 
+I replaced the Generator model with a simple volume. The volume has 2 major attributes: 
 Attenuation volume (almost means transparency)  and Absorbance (How much light gets absorbed).
 
 Instead of a latent vector input, I pass a rotation matrix ``` euler_matrix([randn,randn,0]) ``` and the volume into a differentiable volumetric renderer. This outputs a 2D isometric projection of the volume.
