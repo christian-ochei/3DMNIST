@@ -41,7 +41,7 @@ In order to train this model I introduced a perceptual discriminator which is tr
 
 #### Some Interesting things happens to the output
 
-Because all X,Y orientations are forced to resemble its training data, Interesting things happen.
+Because all projected volumes are forced to resemble its training data, interesting things happen.
 
 
 # 
