@@ -1,6 +1,6 @@
 # 3DMNIST
 
-I present a method for rendering novel views of a scene. The goal is to optimize a volume such that it can represent a sample from a probability distribution from almost all viewing angles. I tuned this idea for the 
+I present a method for rendering novel views of a scene. The goal is to optimize a volume such that it can represent a sample from a probability distribution from almost all viewing angles. I tuned this idea to the 
 [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
 , thus the name, 3DMNIST
 
