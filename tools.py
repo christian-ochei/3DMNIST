@@ -6,6 +6,12 @@ def _indices_from_shape(shape):
     return torch.cat([x[...,None] for x in torch.meshgrid([torch.arange(length) for length in shape])],dim=-1)
 
 def _ray_march(absorbance,attenuation):
+    
+    """
+    This function converts volume to an image by compositing the volumes depth
+    
+    """
+    
     attenuation = torch.sigmoid(attenuation)
     absorbance = torch.sigmoid(absorbance)
     contribution = torch.cat([
@@ -13,6 +19,6 @@ def _ray_march(absorbance,attenuation):
         torch.cumprod(1 - attenuation, dim=-2)[:, :, :-1, :]], dim=-2
     ) * attenuation
 
-    values = contribution * absorbance
+    values = contribution * (1-absorbance)
     render = values.sum(-2)
     return render
