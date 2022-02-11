@@ -8,7 +8,7 @@ def _indices_from_shape(shape):
 def _ray_march(absorbance,attenuation):
     
     """
-    This function converts volume to an image by compositing the volumes depth
+    This function converts volume to an image by compositing the volume's depth
     
     """
     
